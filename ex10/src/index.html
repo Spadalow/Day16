@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript</title>
+  </head>
+  <body>
+    <nav id="navbar" >
+      <header id="header">Eloquent JavaScript</header>
+      <ul>
+        <li class="nav-links">
+          <a href="#introduction" >Introduction</a>
+        </li>
+        <li class="nav-links">
+          <a href="#values_types_and_operators" 
+            >Values, Types, and Operators</a
+          >
+        </li>
+        <li class="nav-links">
+          <a href="#program_structure" 
+            >Program Structure</a
+          >
+        </li>
+        <li class="nav-links">
+          <a href="#functions" >Functions</a>
+        </li>
+        <li class="nav-links">
+          <a href="#objects_and_arrays" 
+            >Data Structures: Object and Arrays</a
+          >
+        </li>
+        <li class="nav-links">
+          <a href="#higher_order_functions" id=
+            >Higher-order Functions</a
+          >
+        </li>
+        <li>
+          <img
+            src="https://eloquentjavascript.net/img/cover.jpg"
+            id="header-img"
+            alt="Eloquent JavaScript"
+          />
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introductin">
+        <header id="introduction">Introduction</header>
+        <article>
+          <p>
+            We think we are creating the system for our own purposes. We believe
+            we are making it in our own image... But the computer is not really
+            like us. It is a projection of a very slim part of ourselves: that
+            portion devoted to logic, order, rule, and clarity. Ellen Ullman,
+            Close to the Machine: Technophilia and its Discontents Picture of a
+            screwdriver and a circuit board This is a book about instructing
+            computers. Computers are about as common as screwdrivers today, but
+            they are quite a bit more complex, and making them do what you want
+            them to do isn’t always easy. If the task you have for your computer
+            is a common, well-understood one, such as showing you your email or
+            acting like a calculator, you can open the appropriate application
+            and get to work. But for unique or open-ended tasks, there probably
+            is no application. That is where programming may come in.
+            Programming is the act of constructing a program—a set of precise
+            instructions telling a computer what to do. Because computers are
+            dumb, pedantic beasts, programming is fundamentally tedious and
+            frustrating. Fortunately, if you can get over that fact, and maybe
+            even enjoy the rigor of thinking in terms that dumb machines can
+            deal with, programming can be rewarding. It allows you to do things
+            in seconds that would take forever by hand. It is a way to make your
+            computer tool do things that it couldn’t do before. And it provides
+            a wonderful exercise in abstract thinking. Most programming is done
+            with programming languages. A programming language is an
+            artificially constructed language used to instruct computers. It is
+            interesting that the most effective way we’ve found to communicate
+            with a computer borrows so heavily from the way we communicate with
+            each other. Like human languages, computer languages allow words and
+            phrases to be combined in new ways, making it possible to express
+            ever new concepts. At one point language-based interfaces, such as
+            the BASIC and DOS prompts of the 1980s and 1990s, were the main
+            method of interacting with computers. They have largely been
+            replaced with visual interfaces, which are easier to learn but offer
+            less freedom. Computer languages are still there, if you know where
+            to look. One such language, JavaScript, is built into every modern
+            web browser and is thus available on almost every device. This book
+            will try to make you familiar enough with this language to do useful
+            and amusing things with it.
+          </p>
+        </article>
+        <ul>
+          <li>
+            <strong>On programming</strong>
+            <p>
+              Besides explaining JavaScript, I will introduce the basic
+              principles of programming. Programming, it turns out, is hard. The
+              fundamental rules are simple and clear, but programs built on top
+              of these rules tend to become complex enough to introduce their
+              own rules and complexity. You’re building your own maze, in a way,
+              and you might just get lost in it. There will be times when
+              reading this book feels terribly frustrating. If you are new to
+              programming, there will be a lot of new material to digest. Much
+              of this material will then be combined in ways that require you to
+              make additional connections. It is up to you to make the necessary
+              effort. When you are struggling to follow the book, do not jump to
+              any conclusions about your own capabilities. You are fine—you just
+              need to keep at it. Take a break, reread some material, and make
+              sure you read and understand the example programs and exercises.
+              Learning is hard work, but everything you learn is yours and will
+              make subsequent learning easier. When action grows unprofitable,
+              gather information; when information grows unprofitable, sleep.
+              Ursula K. Le Guin, The Left Hand of Darkness A program is many
+              things. It is a piece of text typed by a programmer, it is the
+              directing force that makes the computer do what it does, it is
+              data in the computer’s memory, yet it controls the actions
+              performed on this same memory. Analogies that try to compare
+              programs to objects we are familiar with tend to fall short. A
+              superficially fitting one is that of a machine—lots of separate
+              parts tend to be involved, and to make the whole thing tick, we
+              have to consider the ways in which these parts interconnect and
+              contribute to the operation of the whole. A computer is a physical
+              machine that acts as a host for these immaterial machines.
+              Computers themselves can do only stupidly straightforward things.
+              The reason they are so useful is that they do these things at an
+              incredibly high speed. A program can ingeniously combine an
+              enormous number of these simple actions to do very complicated
+              things. A program is a building of thought. It is costless to
+              build, it is weightless, and it grows easily under our typing
+              hands. But without care, a program’s size and complexity will grow
+              out of control, confusing even the person who created it. Keeping
+              programs under control is the main problem of programming. When a
+              program works, it is beautiful. The art of programming is the
+              skill of controlling complexity. The great program is subdued—made
+              simple in its complexity. Some programmers believe that this
+              complexity is best managed by using only a small set of
+              well-understood techniques in their programs. They have composed
+              strict rules (“best practices”) prescribing the form programs
+              should have and carefully stay within their safe little zone. This
+              is not only boring, it is ineffective. New problems often require
+              new solutions. The field of programming is young and still
+              developing rapidly, and it is varied enough to have room for
+              wildly different approaches. There are many terrible mistakes to
+              make in program design, and you should go ahead and make them so
+              that you understand them. A sense of what a good program looks
+              like is developed in practice, not learned from a list of rules.
+            </p>
+          </li>
+          <li>
+            <strong>Why language matters</strong>
+            <p>
+              In the beginning, at the birth of computing, there were no
+              programming languages. Programs looked something like this:
+            </p>
+            <code>
+                00110001 00000000 00000000 <br>
+                00110001 00000001 00000001 <br>
+                00110011 00000001 00000010 <br>
+                01010001 00001011 00000010 <br>
+                00100010 00000010 00001000 <br>
+                01000011 00000001 00000000 <br>
+                01000001 00000001 00000001 <br>
+                00010000 00000010 00000000 <br>
+                01100010 00000000 00000000 <br>
+            </code>
+          </li>
+        </ul>
+      </section>
+      <section class="main-section" id="values_types_and_operators">
+        <header>Values, Types and Operators</header>
+
+        <article>
+          <p>
+            Inside the computer’s world, there is only data. You can read data,
+            modify data, create new data—but that which isn’t data cannot be
+            mentioned. All this data is stored as long sequences of bits and is
+            thus fundamentally alike. Bits are any kind of two-valued things,
+            usually described as zeros and ones. Inside the computer, they take
+            forms such as a high or low electrical charge, a strong or weak
+            signal, or a shiny or dull spot on the surface of a CD. Any piece of
+            discrete information can be reduced to a sequence of zeros and ones
+            and thus represented in bits.
+          </p>
+          <code>
+            0 0 0 0 1 1 0 1 <br>
+            128 64 32 16 8 4 2 1 <br>
+        </code>
+        </article>
+      </section>
+      <section class="main-section" id="program_structure">
+        <header>Program Structure</header>
+        <article>
+          <p>
+            In this chapter, we will start to do things that can actually be
+            called programming. We will expand our command of the JavaScript
+            language beyond the nouns and sentence fragments we’ve seen so far,
+            to the point where we can express meaningful prose.
+          </p>
+          <ul>
+            <li>
+              <strong>Expressions and statements</strong>
+              <p>
+                In Chapter 1, we made values and applied operators to them to
+                get new values. Creating values like this is the main substance
+                of any JavaScript program. But that substance has to be framed
+                in a larger structure to be useful. So that’s what we’ll cover
+                next. A fragment of code that produces a value is called an
+                expression. Every value that is written literally (such as 22 or
+                "psychoanalysis") is an expression. An expression between
+                parentheses is also an expression, as is a binary operator
+                applied to two expressions or a unary operator applied to one.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="functions">
+        <header>Functions</header>
+        <article>
+          <p>
+            Functions are the bread and butter of JavaScript programming. The
+            concept of wrapping a piece of program in a value has many uses. It
+            gives us a way to structure larger programs, to reduce repetition,
+            to associate names with subprograms, and to isolate these
+            subprograms from each other. The most obvious application of
+            functions is defining new vocabulary. Creating new words in prose is
+            usually bad style. But in programming, it is indispensable.
+          </p>
+          <ul>
+            <li>
+              <strong>Defining a function</strong>
+              <p>
+                A function definition is a regular binding where the value of
+                the binding is a function. For example, this code defines square
+                to refer to a function that produces the square of a given
+                number:
+              </p>
+              <code>
+                const square = function(x) { return x * x; };
+                console.log(square(12)); // → 144
+              </code>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="objects_and_arrays">
+        <header>Objects and Arrays</header>
+        <article>
+          <p>
+            Numbers, Booleans, and strings are the atoms that data structures
+            are built from. Many types of information require more than one
+            atom, though. Objects allow us to group values—including other
+            objects—to build more complex structures.
+          </p>
+          <ul>
+            <li>
+              <strong>The weresquirrel</strong>
+              <p>
+                Every now and then, usually between 8 p.m. and 10 p.m., Jacques
+                finds himself transforming into a small furry rodent with a
+                bushy tail. On one hand, Jacques is quite glad that he doesn’t
+                have classic lycanthropy. Turning into a squirrel does cause
+                fewer problems than turning into a wolf. Instead of having to
+                worry about accidentally eating the neighbor (that would be
+                awkward), he worries about being eaten by the neighbor’s cat.
+                After two occasions where he woke up on a precariously thin
+                branch in the crown of an oak, naked and disoriented, he has
+                taken to locking the doors and windows of his room at night and
+                putting a few walnuts on the floor to keep himself busy.
+              </p>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="higher_order_functions">
+        <header>Higher order Functions</header>
+        <ul>
+          <li>
+            <strong>Abstraction</strong>
+            <p>
+              In the context of programming, these kinds of vocabularies are
+              usually called abstractions. Abstractions hide details and give us
+              the ability to talk about problems at a higher (or more abstract)
+              level.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
